@@ -2,13 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip Planner</title>
     <link rel="stylesheet" href="./style.css"></link>
     <script src="./bundle.js" defer></script>
   </head>
   <body>
+    <div id = "navbar">This is my navbar</div>
+    <div class = "sidebar">
+    <div id = "location-options">
+      <div id="hotel-select"></div>
+      <div id="restaurant-select"></div>
+      <div id="activity-select"></div>
+    </div>
+    <div id = "current-itinerary">
+      <div id = "itinerary-header"></div>
+      <div id = "itinerary-list"></div>
+    </div>
+    </div>
     <div id="map"></div>
   </body>
 </html>

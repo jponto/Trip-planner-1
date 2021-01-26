@@ -1,4 +1,5 @@
 import mapboxgl from 'mapbox-gl';
+import markerGenerator from './marker';
 
 mapboxgl.accessToken =
   'pk.eyJ1Ijoic2hhd25qciIsImEiOiJja2tlN3VxNXAweXd3Mm9wYmlqeTNpa2prIn0.MHDNqwqGwi_jbD055z8_lw';
@@ -10,10 +11,6 @@ const map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/streets-v10', // mapbox has lots of different map styles available
 });
 
-const markerDomEl = document.createElement('div');
-markerDomEl.style.width = '32px';
-markerDomEl.style.height = '32px';
-markerDomEl.style.backgroundColor = 'black';
-markerDomEl.style.borderRadius = '50%';
+const marker = markerGenerator('hotel', [-74.009, 40.705]);
 
-new mapboxgl.Marker(markerDomEl).setLngLat([-74.009, 40.705]).addTo(map);
+marker.addTo(map);
